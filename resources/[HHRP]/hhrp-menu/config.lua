@@ -46,6 +46,16 @@ rootMenuConfig =  {
         subMenus = {"general:putinvehicle", "general:escort", "medic:revive2", "cuffs:remmask", "police:checkbank", "cuffs:checkinventory", "police:panic" }
     },
     {
+        id = "mechanic-action",
+        displayName = "Mechanic Actions",
+        icon = "#mechanic-action",
+        enableMenu = function()
+            isDead = exports["hhrp-ambulancejob"]:GetDeath()
+            return (HHCore.GetPlayerData().job.name == 'mechanic' and not isDead)
+        end,
+        subMenus = { }
+    },
+    {
         id = "mdt",
         displayName = "MDT",
         icon = "#mdt",

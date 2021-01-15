@@ -1,3 +1,8 @@
+/* @font-face {
+    font-family: Staatliches;
+    src: url(/css/Staatliches-Regular.tff);
+} */
+
 html {
     overflow: hidden;
     -webkit-user-select: none; /* Safari */
@@ -14,10 +19,10 @@ p {
 .bottom-bar2 {
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 30px;
   bottom: 0px;
   left: 0px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.801);
   border-top: 2px solid #ff7b5a;
   box-shadow: 0px 0px 10px black;
 }
@@ -30,28 +35,28 @@ img {
 .top-bar2 {
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 30px;
   right: 0;
   top: 0;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.801);
   border-bottom: 2px solid#ff7b5a;
   box-shadow: 0px 0px 10px black;
 }
 
 .charWelcome {
-    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(0, 0, 0, 0.8); */
     padding: 12px;
     margin-top: 8em;
-    width: 100vw;
-    border-bottom: 1px solid #ff7b5a;
-    border-top: 1px solid #ff7b5a;
-    box-shadow: 0 0 20px black;
+    /* width: 100vw; */
+    /* border-bottom: 1px solid #ff7b5a; */
+    /* border-top: 1px solid #ff7b5a; */
+    /* box-shadow: 0 0 20px black; */
     text-align: center;
     color: white;
     display: none;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-
+/* 
 .title{
     text-align: center;
     background: black;
@@ -81,7 +86,7 @@ h1 {
 }
 
 #changelog .log {
-    /*max-height: 200px;*/
+
     height: 20%;
     overflow: auto;
     padding: 8px;
@@ -118,9 +123,9 @@ h1 {
 
 #changelog li {
     padding: 2px;
-}
+} */
 
-.scrollbar {
+/* .scrollbar {
   overflow-y: scroll;
   width: 770px;
   height: 225px;
@@ -132,7 +137,7 @@ h1 {
   color:#ff7b5a;
   border-top: 0.8px solid #ff7b5a;
   box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-}
+} */
 
 .scrollbar h2 {
     color: white;
@@ -179,9 +184,9 @@ h1 {
 
 }
 
-.card-body-1 {
+/* .card-body-1 {
     background-color: #000004;
-}
+} */
 
 .card-body-2 {
     background-color: transparent !important;
