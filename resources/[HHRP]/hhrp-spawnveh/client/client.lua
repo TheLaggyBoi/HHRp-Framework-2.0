@@ -620,11 +620,11 @@ RegisterCommand('livery', function(source, args, raw)
     end
 end)
 
--- RegisterCommand("svlist", function(source, args, rawCommand)
--- 	if HHCore.GetPlayerData().job.name == 'police' then
--- 	TriggerEvent("customNotification", " \n [1] Police Bike \n [2] Police Harley \n [3] Police Impala \n [4] 2014 Tahoe \n [5] 2018 Tahoe \n [6] 2018 Charger \n [7] 2010 Charger \n [8] Police Tauras \n [9] Police Interceptor \n [10] Police Explorer \n [11] S.E. Porche \n [12] S.E. Mustang \n [13] S.E. Camaro \n [14] Police Durango \n [15] Police F250 \n [16] Police F150 \n [17] Police Silverado \n [18] Police Maverick Helicopter")
--- 	end
--- end)
+RegisterCommand("svlist", function(source, args, rawCommand)
+	if HHCore.GetPlayerData().job.name == 'police' then
+	TriggerEvent("customNotification", " \n [1] Police Bike \n [2] Police Harley \n [3] Police Impala \n [4] 2014 Tahoe \n [5] 2018 Tahoe \n [6] 2018 Charger \n [7] 2010 Charger \n [8] Police Tauras \n [9] Police Interceptor \n [10] Police Explorer \n [11] S.E. Porche \n [12] S.E. Mustang \n [13] S.E. Camaro \n [14] Police Durango \n [15] Police F250 \n [16] Police F150 \n [17] Police Silverado \n [18] Police Maverick Helicopter")
+	end
+end)
 
 RegisterCommand("svemslist", function(source, args, rawCommand)
 	if HHCore.GetPlayerData().job.name == 'ambulance' then

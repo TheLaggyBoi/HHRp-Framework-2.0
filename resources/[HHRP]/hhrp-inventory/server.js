@@ -616,6 +616,38 @@ else if(secondInventory == "55")
     emitNet("inventory-open-target", src, [invArray,arrayCount,playerinvname,shopArray,shopAmount,targetinvname,500,false]);
 }
 
+else if(secondInventory == "56")
+{
+    var targetinvname = targetName;
+    var shopArray = lmcmechanic();
+    var shopAmount = 6;
+    emitNet("inventory-open-target", src, [invArray,arrayCount,playerinvname,shopArray,shopAmount,targetinvname,500,false]);
+}
+
+else if(secondInventory == "57")
+{
+    var targetinvname = targetName;
+    var shopArray = harmonymechanic();
+    var shopAmount = 6;
+    emitNet("inventory-open-target", src, [invArray,arrayCount,playerinvname,shopArray,shopAmount,targetinvname,500,false]);
+}
+
+else if(secondInventory == "58")
+{
+    var targetinvname = targetName;
+    var shopArray = burgershot();
+    var shopAmount = 2;
+    emitNet("inventory-open-target", src, [invArray,arrayCount,playerinvname,shopArray,shopAmount,targetinvname,500,false]);
+}
+
+else if(secondInventory == "59")
+{
+    var targetinvname = targetName;
+    var shopArray = cluckingbell();
+    var shopAmount = 9;
+    emitNet("inventory-open-target", src, [invArray,arrayCount,playerinvname,shopArray,shopAmount,targetinvname,500,false]);
+}
+
 else if(secondInventory == "101")
 {
     var targetinvname = targetName;
@@ -661,7 +693,7 @@ else if(secondInventory == "107")
 {
     var targetinvname = targetName;
     var shopArray = illegalstore();
-    var shopAmount = 5;
+    var shopAmount = 6;
     emitNet("inventory-open-target", src, [invArray,arrayCount,playerinvname,shopArray,shopAmount,targetinvname,500,false]);
 }  
 
@@ -1317,13 +1349,65 @@ function Mechanic() {
     return JSON.stringify(shopItems);
 }
 
+function lmcmechanic() {
+    var shopItems = [
+        { item_id: "advrepairkit", id: 0, name: "craft", information: "{}", slot: 1, amount: 20 },
+        { item_id: "repairkit", id: 0, name: "craft", information: "{}", slot: 2, amount: 20 },
+        { item_id: "advlockpick", id: 0, name: "Shop", information: "{}", slot: 3, amount: 25 },
+        { item_id: "lockpick", id: 0, name: "Shop", information: "{}", slot: 4, amount: 25 },
+        { item_id: "nitrous", id: 0, name: "craft", information: "{}", slot: 5, amount: 5 },
+        { item_id: "tuner", id: 0, name: "craft", information: "{}", slot: 6, amount: 1 },
+    ];
+    return JSON.stringify(shopItems);
+}
+
+function harmonymechanic() {
+    var shopItems = [
+        { item_id: "advrepairkit", id: 0, name: "craft", information: "{}", slot: 1, amount: 20 },
+        { item_id: "repairkit", id: 0, name: "craft", information: "{}", slot: 2, amount: 20 },
+        { item_id: "advlockpick", id: 0, name: "Shop", information: "{}", slot: 3, amount: 25 },
+        { item_id: "lockpick", id: 0, name: "Shop", information: "{}", slot: 4, amount: 25 },
+        { item_id: "nitrous", id: 0, name: "craft", information: "{}", slot: 5, amount: 5 },
+        { item_id: "tuner", id: 0, name: "craft", information: "{}", slot: 6, amount: 1 },
+    ];
+    return JSON.stringify(shopItems);
+}
+
+function burgershot() {
+    var shopItems = [
+        { item_id: "cbfowl", id: 0, name: "craft", information: "{}", slot: 1, amount: 20 },
+        { item_id: "hamburger", id: 0, name: "craft", information: "{}", slot: 2, amount: 20 },
+        // { item_id: "advlockpick", id: 0, name: "Shop", information: "{}", slot: 3, amount: 25 },
+        // { item_id: "lockpick", id: 0, name: "Shop", information: "{}", slot: 4, amount: 25 },
+        // { item_id: "nitrous", id: 0, name: "craft", information: "{}", slot: 5, amount: 5 },
+        // { item_id: "tuner", id: 0, name: "craft", information: "{}", slot: 6, amount: 1 },
+    ];
+    return JSON.stringify(shopItems);
+}
+
+function cluckingbell() {
+    var shopItems = [
+        { item_id: "cbballs", id: 0, name: "craft", information: "{}", slot: 1, amount: 1 },
+        { item_id: "cbbucket", id: 0, name: "craft", information: "{}", slot: 2, amount: 1 },
+        { item_id: "cbclucker", id: 0, name: "Shop", information: "{}", slot: 3, amount: 1 },
+        { item_id: "cbdrink", id: 0, name: "Shop", information: "{}", slot: 4, amount: 1 },
+        { item_id: "cbfarmers", id: 0, name: "craft", information: "{}", slot: 5, amount: 1 },
+        { item_id: "cbfries", id: 0, name: "craft", information: "{}", slot: 6, amount: 1 },
+        { item_id: "cbrings", id: 0, name: "craft", information: "{}", slot: 7, amount: 1 },
+        { item_id: "cbrownie", id: 0, name: "craft", information: "{}", slot: 8, amount: 1 },
+        { item_id: "cbveggy", id: 0, name: "craft", information: "{}", slot: 9, amount: 1 },
+    ];
+    return JSON.stringify(shopItems);
+}
+
 function illegalstore() {
     var shopItems = [
        { item_id: "highgradefert", id: 0, name: "craft", information: "{}", slot: 1, amount: 1},  
        { item_id: "purifiedwater", id: 0, name: "craft", information: "{}", slot: 2, amount: 1},
        { item_id: "plantpot", id: 0, name: "craft", information: "{}", slot: 3, amount: 1},
-       { item_id: "bakingsoda", id: 0, name: "Shop", information: "{}", slot: 4, amount: 50 },
-       { item_id: "glucose", id: 0, name: "Shop", information: "{}", slot: 5, amount: 50 },
+       { item_id: "bakingsoda", id: 0, name: "craft", information: "{}", slot: 4, amount: 50 },
+       { item_id: "glucose", id: 0, name: "craft", information: "{}", slot: 5, amount: 50 },
+       { item_id: "cuffs", id: 0, name: "craft", information: "{}", slot: 6, amount: 50 },
  
     ];
     return JSON.stringify(shopItems);

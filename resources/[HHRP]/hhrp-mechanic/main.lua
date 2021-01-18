@@ -32,7 +32,7 @@ local engineHealth = 0
 local bodyHealth = 0
 
 Citizen.CreateThread(function()
-	local blip = AddBlipForCoord(-226.1885, -1314.604, 18.46)
+	local blip = AddBlipForCoord(-339.2438,-136.6063,38.55546)
 	SetBlipSprite (blip, 446)
 	SetBlipDisplay(blip, 4)
 	SetBlipScale  (blip, 0.7)
@@ -40,7 +40,7 @@ Citizen.CreateThread(function()
 	SetBlipAsShortRange(blip, true)
 
 	BeginTextCommandSetBlipName('STRING')
-	AddTextComponentSubstringPlayerName('Bennys Customs')
+	AddTextComponentSubstringPlayerName('Bad Boy Customs')
 	EndTextCommandSetBlipName(blip)
 end)
 -- #MarkedForMarker

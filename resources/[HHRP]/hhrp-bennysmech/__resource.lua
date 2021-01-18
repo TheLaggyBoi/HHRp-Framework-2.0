@@ -14,13 +14,11 @@ files {
 client_scripts {
     "core/_config/cfg_vehicleCustomisation.lua",
     "core/client/ui/cl_ui.lua",
-    "core/client/cl_bennys.lua",
-    "core/client/main.lua"
+    "core/client/cl_bennys.lua"
 }
 
 server_scripts {
     '@mysql-async/lib/MySQL.lua',
     "core/_config/cfg_vehicleCustomisation.lua",
-    "core/server/sv_bennys.lua",
-    "core/server/server.lua"
+    "core/server/sv_bennys.lua"
 }

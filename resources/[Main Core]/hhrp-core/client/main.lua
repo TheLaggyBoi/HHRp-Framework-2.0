@@ -19,27 +19,45 @@ local stackTwice = false
 
 local stackThree = false
 
+local stackfour = false
+
+local stackfive = false
+
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(60 * 60000)
-		if paycheckReady == true and stackTwice == false and stackThree == false then
+		Citizen.Wait(15 * 60000)
+		if paycheckReady == true and stackTwice == false and stackThree == false and stackfour == false and stackfive == false then
 			HHCore.TriggerServerCallback('paycheck:checkSalary', function(result)
 				if result ~= nil or result ~= false then
 					stackTwice = true
 					TriggerEvent('DoLongHudText', 'Your payslip of $' .. result .. ' was saved. Your new payslip is now $' .. (result * 2) .. '.', 1)
 				end
 			end)
-		elseif paycheckReady == true and stackTwice == true and stackThree == false then
+		elseif paycheckReady == true and stackTwice == true and stackThree == false and stackfour == false and stackfive == false then
 			HHCore.TriggerServerCallback('paycheck:checkSalary', function(result)
 				if result ~= nil or result ~= false then
 					stackThree = true
 					TriggerEvent('DoLongHudText', 'Your payslip of $' .. (result * 2) .. ' was saved. Your new payslip is now $' .. (result * 3) .. '.', 1)
 				end
 			end)
-		elseif paycheckReady == true and stackTwice == true and stackThree == true then
+		elseif paycheckReady == true and stackTwice == true and stackThree == true and stackfour == false and stackfive == false then
 			HHCore.TriggerServerCallback('paycheck:checkSalary', function(result)
 				if result ~= nil or result ~= false then
-					TriggerEvent('DoLongHudText', 'Your payslip of $' .. result .. ' was revoked. Your payslip of $' .. (result * 3) .. ' is still waiting for you.', 1)
+					stackfour = true
+					TriggerEvent('DoLongHudText', 'Your payslip of $' .. result .. ' was revoked. Your payslip of $' .. (result * 4) .. ' is still waiting for you.', 1)
+				end
+			end)
+		elseif paycheckReady == true and stackTwice == true and stackThree == true and stackfour == true and stackfive == false then
+			HHCore.TriggerServerCallback('paycheck:checkSalary', function(result)
+				if result ~= nil or result ~= false then
+					stackfive = true
+					TriggerEvent('DoLongHudText', 'Your payslip of $' .. result .. ' was revoked. Your payslip of $' .. (result * 5) .. ' is still waiting for you.', 1)
+				end
+			end)
+		elseif paycheckReady == true and stackTwice == true and stackThree == true and stackfour == true and stackfive == true then
+			HHCore.TriggerServerCallback('paycheck:checkSalary', function(result)
+				if result ~= nil or result ~= false then
+					TriggerEvent('DoLongHudText', 'Your payslip of $' .. result .. ' was revoked. Your payslip of $' .. (result * 5) .. ' is still waiting for you.', 1)
 				end
 			end)
 		else
@@ -65,21 +83,36 @@ Citizen.CreateThread(function()
 				DrawMarker(27,-1082.81, -248.19, 36.77, 0, 0, 0, 0, 0, 0, 0.6, 0.6, 0.5001, 0, 155, 255, 200, 0, 0, 0, 0) 
 			end
 			if IsControlJustPressed(0, 38) then
-				if paycheckReady == true and stackTwice == false and stackThree == false then
+				if paycheckReady == true and stackTwice == false and stackThree == false and stackfour == false and stackfive == false  then
 					TriggerServerEvent('paycheck:collectPay')
 					Citizen.Wait(1500)
 					paycheckReady = false
-				elseif stackTwice == true and paycheckReady == true and stackThree == false then
+				elseif stackTwice == true and paycheckReady == true and stackThree == false and stackfour == false and stackfive == false then
 					TriggerServerEvent('paycheck:collectPayStack')
 					Citizen.Wait(1500)
 					stackTwice = false
 					paycheckReady = false
-				elseif stackTwice == true and paycheckReady == true and stackThree == true then
+				elseif stackTwice == true and paycheckReady == true and stackThree == true and stackfour == false and stackfive == false then
 					TriggerServerEvent('paycheck:collectPayStack3')
 					Citizen.Wait(1500)
 					stackTwice = false
 					paycheckReady = false
 					stackThree = false
+				elseif stackTwice == true and paycheckReady == true and stackThree == true and stackfour == true and stackfive == false then
+					TriggerServerEvent('paycheck:collectPayStack4')
+					Citizen.Wait(1500)
+					stackTwice = false
+					paycheckReady = false
+					stackThree = false
+					stackfour = false
+				elseif stackTwice == true and paycheckReady == true and stackThree == true and stackfour == true and stackfive == true then
+					TriggerServerEvent('paycheck:collectPayStack5')
+					Citizen.Wait(1500)
+					stackTwice = false
+					paycheckReady = false
+					stackThree = false
+					stackfour = false
+					stackfive = false
 				else
 					TriggerEvent('DoLongHudText', 'You don\'t have a paycheck ready to be picked up!', 2)
 				end

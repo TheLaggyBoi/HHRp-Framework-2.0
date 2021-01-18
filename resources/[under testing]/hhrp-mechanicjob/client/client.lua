@@ -470,7 +470,7 @@ function MechShopStorageMenu(id, val)
     HHCore.UI.Menu.CloseAll()
 	local elements = {
 		{ label = Lang['storage_deposit'], value = "storage_deposit" },
-		{ label = Lang['storage_withdraw'], value = "storage_withdraw" },
+		--{ label = Lang['storage_withdraw'], value = "storage_withdraw" },
 	}
 	HHCore.UI.Menu.Open('default', GetCurrentResourceName(), "mech_shop_storage_menu",
 		{

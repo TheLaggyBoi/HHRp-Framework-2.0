@@ -507,6 +507,66 @@ Citizen.CreateThread(function()
         	end   
 		end
 
+		if(Vdist(1000.893,-130.0439, 74.06094, pos.x, pos.y, pos.z) < 10.0)then
+			found = true
+			local job = HHCore.GetPlayerData().job.name
+			if job == "mechanic" then
+			DrawMarker(27,1000.893,-130.0439, 74.06094 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(1000.893,-130.0439, 74.06094, pos.x, pos.y, pos.z) < 2.0)then
+				HHCore.ShowHelpNotification("Press ~INPUT_CONTEXT~ Open Mechanic Crafting")
+				if IsControlJustPressed(1, 38) and (Vdist(1000.893,-130.0439, 74.06094, pos.x, pos.y, pos.z) < 2.0) then
+						TriggerEvent("server-inventory-open", "56", "Craft");  
+						Wait(1000)
+			    	end
+            	end
+        	end   
+		end
+
+		if(Vdist(1175.08,2636.093, 37.75381, pos.x, pos.y, pos.z) < 10.0)then
+			found = true
+			local job = HHCore.GetPlayerData().job.name
+			if job == "mechanic" then
+			DrawMarker(27,1175.08,2636.093, 37.75381 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(1175.08,2636.093, 37.75381, pos.x, pos.y, pos.z) < 2.0)then
+				HHCore.ShowHelpNotification("Press ~INPUT_CONTEXT~ Open Mechanic Crafting")
+				if IsControlJustPressed(1, 38) and (Vdist(1175.08,2636.093, 37.75381, pos.x, pos.y, pos.z) < 2.0) then
+						TriggerEvent("server-inventory-open", "57", "Craft");  
+						Wait(1000)
+			    	end
+            	end
+        	end   
+		end
+
+		if(Vdist(-1198.617,-901.8658, 13.99517, pos.x, pos.y, pos.z) < 10.0)then
+			found = true
+			local job = HHCore.GetPlayerData().job.name
+			if job == "burgershot" then
+			DrawMarker(27,-1198.617,-901.8658, 13.99517 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(-1198.617,-901.8658, 13.99517, pos.x, pos.y, pos.z) < 2.0)then
+				HHCore.ShowHelpNotification("Press ~INPUT_CONTEXT~ to start cooking")
+				if IsControlJustPressed(1, 38) and (Vdist(-1198.617,-901.8658, 13.99517, pos.x, pos.y, pos.z) < 2.0) then
+						TriggerEvent("server-inventory-open", "58", "Craft");  
+						Wait(1000)
+			    	end
+            	end
+        	end   
+		end
+
+		if(Vdist(-520.174,-701.4424, 33.17243, pos.x, pos.y, pos.z) < 10.0)then
+			found = true
+			local job = HHCore.GetPlayerData().job.name
+			if job == "cluckingbell" then
+			DrawMarker(27,-520.174,-701.4424, 33.17243 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(-520.174,-701.4424, 33.17243, pos.x, pos.y, pos.z) < 2.0)then
+				HHCore.ShowHelpNotification("Press ~INPUT_CONTEXT~ to start cooking")
+				if IsControlJustPressed(1, 38) and (Vdist(-520.174,-701.4424, 33.17243, pos.x, pos.y, pos.z) < 2.0) then
+						TriggerEvent("server-inventory-open", "59", "Craft");  
+						Wait(1000)
+			    	end
+            	end
+        	end   
+		end
+
 		if(Vdist(-218.80, -1331.529, 23.14, pos.x, pos.y, pos.z) < 10.0)then
 			found = true
 			local job = HHCore.GetPlayerData().job.name

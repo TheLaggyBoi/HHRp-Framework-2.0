@@ -71,14 +71,14 @@ Citizen.CreateThread(function()
 	end
 end)
 
-Citizen.CreateThread(function()
-	while true do
-		Citizen.Wait(60000)
-		if wait then
-			wait = false
-		end
-	end
-end)
+-- Citizen.CreateThread(function()
+-- 	while true do
+-- 		Citizen.Wait(60000)
+-- 		if wait then
+-- 			wait = false
+-- 		end
+-- 	end
+-- end)
 
 function TakeMilk()
 	if wait then

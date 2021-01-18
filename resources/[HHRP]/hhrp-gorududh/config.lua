@@ -23,5 +23,5 @@ Config.Cows = {
 
 Config.Blips = {
   {title="Cows", colour=4, id=141, x = 1136.73,size=0.8, y = -2352.22, z = 30.2},
-  {title="Milk Sell", colour=37, id=467,size=0.8, x = 51.29, y = -1317.92, z = 29.29},
+  {title="Milk Sell", colour=37, id=467,size=0.0, x = 51.29, y = -1317.92, z = 29.29},
 }

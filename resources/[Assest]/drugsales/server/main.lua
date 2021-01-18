@@ -13,7 +13,7 @@ HHCore.RegisterServerCallback("disc-drugsales:sellDrug", function(source, cb)
         local randomCount = math.random(item.sellCountMin, item.sellCountMax)
         local count = randomCount
 
-        player.addAccountMoney('money', randomPayment * count)
+        player.addMoney(randomPayment * count)
 
         cb(randomPayment * count)
     else
@@ -29,7 +29,7 @@ HHCore.RegisterServerCallback("disc-drugsales:sellDrugcoke", function(source, cb
 
         local randomCount = 1
         local count = randomCount
-        player.addAccountMoney('money', randomPayment * count)
+        player.addMoney(randomPayment * count)
         cb(randomPayment * count)
     else
         cb(false)
@@ -44,7 +44,7 @@ HHCore.RegisterServerCallback("disc-drugsales:sellDrugmarijuana", function(sourc
         local randomCount = 1
         local count = randomCount
 
-        player.addAccountMoney('money', randomPayment * count)
+        player.addMoney(randomPayment * count)
 
         cb(randomPayment * count)
     else
@@ -59,7 +59,7 @@ HHCore.RegisterServerCallback("disc-drugsales:sellDrugoxy", function(source, cb)
         local randomPayment = 1550
         local randomCount = 1
         local count = randomCount
-        player.addAccountMoney('money', randomPayment * count)
+        player.addMoney(randomPayment * count)
 
         cb(randomPayment * count)
     else

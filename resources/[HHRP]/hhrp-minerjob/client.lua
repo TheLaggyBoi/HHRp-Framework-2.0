@@ -60,7 +60,7 @@ Citizen.CreateThread(function()
 					if IsControlJustPressed(0,Config.KeyToStartMining) and not keyPressed then
 						keyPressed = true
 						--HHCore.TriggerServerCallback("hhrp_MinerJob:getPickaxe", function(pickaxe)
-						if exports['hhrp-inventory']:hasEnoughOfItem('pickaxe', 1, false) then
+						if exports['hhrp-inventory']:hasEnoughOfItem('pickaxe', 1, true) then
 							local stone = exports['hhrp-inventory']:getQuantity('stone')
 							if stone <= 95 then		
 								HHCore.TriggerServerCallback("hhrp_MinerJob:didmining", function(didminingok) 
@@ -236,7 +236,7 @@ function WashingEvent(k,v)
 	Citizen.Wait(200)
 	
 	--HHCore.TriggerServerCallback("hhrp_MinerJob:removeStone", function(stoneCount)
-	local WStoneCount = exports['hhrp-inventory']:hasEnoughOfItem('stone', 10, false)
+	local WStoneCount = exports['hhrp-inventory']:hasEnoughOfItem('stone', 10, true)
 		if WStoneCount then
 			-- exports['pogressBar']:drawBar(10000, 'Plaunami akmenys')
 			exports['hhrp-taskbar']:taskBar(500, "Washing Stones")
@@ -257,7 +257,6 @@ function WashingEvent(k,v)
 		FreezeEntityPosition(playerPed, false)
 		currentlyWashing = false
 		keyPressed = false
-		TriggerEvent('OpenInv')
 	--end)
 end
 
@@ -283,7 +282,7 @@ Citizen.CreateThread(function()
 						keyPressed = true
 						local closestPlayer, closestDistance = HHCore.Game.GetClosestPlayer()
 						if closestPlayer == -1 or closestDistance >= 0.7 then
-							local WStoneCount1 = exports['hhrp-inventory']:hasEnoughOfItem('washedstone', 10, false)
+							local WStoneCount1 = exports['hhrp-inventory']:hasEnoughOfItem('washedstone', 10, true)
 							if WStoneCount1 then
 								TriggerEvent("inventory:removeItem", 'washedstone', 10)
 								currentlySmelting = true
@@ -352,8 +351,7 @@ function SmeltingEvent()
 	
 	--FreezeEntityPosition(playerPed, false)
 	currentlySmelting = false
-	keyPressed = 
-	TriggerEvent('OpenInv')
+	keyPressed = false
 
 end
 

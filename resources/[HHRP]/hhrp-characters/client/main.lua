@@ -58,9 +58,9 @@ AddEventHandler('kashactersC:WelcomePage', function()
     })
 end)
 
-RegisterCommand("AdminTestOkay", function()
-	TriggerEvent("hotel:createRoom")
-end)
+-- RegisterCommand("AdminTestOkay", function()
+-- 	TriggerEvent("hotel:createRoom")
+-- end)
 
 local function disconnect()
     TriggerServerEvent("hhrp-login:disconnectPlayer")

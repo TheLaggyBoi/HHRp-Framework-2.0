@@ -60,12 +60,12 @@ ss_enable_dynamic_weather = true
 ss_default_weather = "CLOUDS"   
 
 -- Weather timer (in minutes) between dynamic weather changes (Default: 10minutes)
-ss_weather_timer = 15
+ss_weather_timer = 60
 
 ss_reduce_rain_chance = true
 
 -- Weather timeout for rain (in minutes). This means it can only rain once every X minutes - Default: 60 minutes)
-ss_rain_timeout = 45
+ss_rain_timeout = 60
 
 -- Weather transitions are configured here, pay attention to the example.
 -- Example: ["CurrentWeather"] = {"Next Possible Weather 1", "Next Possible Weather 2"}
